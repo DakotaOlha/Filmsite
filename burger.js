@@ -10,10 +10,30 @@ let message = document.getElementById('message').value;
 
 // Перевіряємо, чи всі поля заповнені
 if (name && email && message) {
-    alert('Форма успішно надіслана!'); // Тестове повідомлення
-    // Тут можна вставити код для EmailJS або іншого сервісу
+    // Відправляємо через EmailJS
+    emailjs.send("service_bm8iyvc", "template_b58vi4o", {
+        name: name,
+        email: email,
+        message: message
+    }).then(
+        function(response) {
+            alert("Відгук успішно надіслано!");
+            document.getElementById('review-form').reset(); // Очищення форми
+        },
+        function(error) {
+            alert("Помилка надсилання: " + JSON.stringify(error));
+        }
+    );
 } else {
     alert('Будь ласка, заповніть всі поля!');
 }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const burgerMenu = document.getElementById("burger-menu");
+    const navMenu = document.getElementById("nav-menu");
+
+    burgerMenu.addEventListener("click", function () {
+        navMenu.classList.toggle("show");
+    });
+});
