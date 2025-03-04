@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, .6);
+    justify-content: space-between;
+    padding: 5px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.wrap-logo {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.logo > img {
+    max-height: 50px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+.other-pages ul {
+    margin: 20;
+    padding: 0;
+}
+
+.other-pages li {
+    display: inline;
+    margin: 20;
+}
+
+.other-pages li > a{
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+    font-size: 18px; 
+    border-radius: 4px;
+}
+
+.other-pages {
+    display: inline;
+}
+
+header li > a:hover {
+    background-color: #fbdc2d;
+    color: #212121;
+}
+
+
+.content {
+    padding-top: 70px;
+}
+
+ul {
+    margin: 20px;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin: 20px;
+}
+
+
+
+section {
+    padding: 40px;
+    text-align: center;
+    background: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.film {
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+}
+
+.film img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+form input, form textarea, form button {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #fbc72d;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн-каталог фільмів</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src= "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class = "wrap-logo">
+            <a href="index.html" class = "logo">
+                <img src="https://uakino.me/templates/uakino/images/logo.png?v3" alt="logotype">
+            </a>
+        </div>
+      <nav class = "other-pages">
+        <ul>
+            <li>
+                <a href="Films.html">
+                    <span>ФІЛЬМИ</span>
+                </a>
+            </li>
+            <li>
+                <a href="Serials.html">
+                    <span>СЕРІАЛИ</span>
+                </a>
+            </li>
+            <li>
+                <a href="Top.html">
+                    <span>ТОП-100</span>
+                </a>
+            </li>
+            <li>
+                <a href="Aboutus.html">
+                    <span>ПРО НАС</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    </header>
+
+    <div class = "content">
+        <section id="home">
+            <h1>Ласкаво просимо до онлайн-каталогу фільмів</h1>
+            <p>Тут ви можете знайти найкращі фільми з описами та постерами.</p>
+        </section>
+    
+        <section id="about">
+            <h2>Про нас</h2>
+            <p>Наша команда створює зручний сервіс для перегляду та аналізу фільмів.</p>
+        </section>
+        
+        <section id="services">
+            <h2>Наші послуги</h2>
+            <ul>
+                <li>Каталогізація фільмів</li>
+                <li>Оцінка та рецензії</li>
+                <li>Рекомендації</li>
+            </ul>
+        </section>
+        
+        <section id="portfolio">
+            <h2>Каталог</h2>
+            <div class="film">
+                <!-- <img src="poster.jpg" alt="Фільм"> -->
+                <h3>Назва фільму</h3>
+                <p>Короткий опис фільму.</p>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Контакти</h2>
+            <form action="https://formspree.io/projects/2685403301725339219" method="post">
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Повідомлення:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Надіслати</button>
+            </form>
+        </section>    
+    </div>
+
+    <!-- <div class= "container pt-5">
+        <div class="row">
+             <! — Movie Cards →
+            <div class="col-md-9">
+                <div class="row" id="appendData">
+                    
+                </div>
+            </div>
+            
+             <! — Movie Details Section → 
+            <div class = "col-md-3 position-fixed" style="top: 20px; right: 15px; max-height: 100vh; overflow-y: auto;">
+                <div id = "movieDetails" style="display: none;">
+                    <h4 id="detailsTitle">hhhh</h4>
+                    <img src="img20250224_23354271.jpg" alt="Movie Poster" id="detailsPoster" class="img-fluid">
+                    <p><strong>Release Date:</strong> <span id="detailsReleaseDate"></span></p>
+                    <p><strong>Runtime:</strong> <span id="detailsRuntime"></span></p>
+                    <p><strong>Overview:</strong> <span id="detailsOverview"></span></p>
+                    <p><strong>Vote Average:</strong> <span id="detailsVoteAverage"></span></p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</body>
+</html>
