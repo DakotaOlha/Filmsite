@@ -1,5 +1,5 @@
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
 }
 
@@ -7,13 +7,13 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, .6);
     justify-content: space-between;
     padding: 5px;
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 1000;
+    z-index: 4000;
 }
 
 .wrap-logo {
@@ -58,6 +58,11 @@ header li > a:hover {
     color: #212121;
 }
 
+
+.content {
+    padding-top: 70px;
+}
+
 ul {
     margin: 20px;
     list-style-type: none;
@@ -66,6 +71,54 @@ ul {
 
 li {
     margin: 20px;
+}
+
+.burger-menu {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-right: 10%;
+}
+
+@media (max-width: 820px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .other-pages {
+        position: fixed;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        flex-direction: column;
+        padding: 10px 0;
+        
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: visibility 0.3s, opacity 0.3s ease-in-out, transform 0.3s;
+    }
+
+    .other-pages ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .other-pages li {
+        margin: 10px 0;
+    }
+
+    .other-pages.show {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .container {

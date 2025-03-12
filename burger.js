@@ -1,6 +1,6 @@
 emailjs.init("ZBRRhBdwIinTRFUs1");
 
-document.getElementById('review-form').addEventListener('submit', function(event) {
+document.getElementById('contact-form').addEventListener('submit', function(event) {
 event.preventDefault(); // Зупиняє стандартне надсилання форми
 
 // Отримуємо дані з форми
@@ -18,7 +18,7 @@ if (name && email && message) {
     }).then(
         function(response) {
             alert("Відгук успішно надіслано!");
-            document.getElementById('review-form').reset(); // Очищення форми
+            document.getElementById('contact-form').reset(); // Очищення форми
         },
         function(error) {
             alert("Помилка надсилання: " + JSON.stringify(error));

@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sen:wght@400..800&display=swap" 
+        rel="stylesheet">
+        <script src="https://kit.fontawesome.com/9847fa31ee.js" crossorigin="anonymous"></script>
     <title>Document</title>
     <link rel="stylesheet" href="TopStyles.css">
 </head>
@@ -13,7 +19,12 @@
                 <img src="https://uakino.me/templates/uakino/images/logo.png?v3" alt="logotype">
             </a>
         </div>
-      <nav class = "other-pages">
+
+        <button class="burger-menu" id="burger-menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
+      <nav class = "other-pages" id = "nav-menu">
         <ul>
             <li>
                 <a href="Films.html">
@@ -39,7 +50,7 @@
     </nav>
     </header>
     <div class = "content">
-        <h1>Top100</h1>
+        <h1 class = "main-header">Top100</h1>
         <div class="list-top">
             <div class="list-top-place" data-place = "1">
                 <span>1</span>
@@ -60,10 +71,17 @@
                             <img src="" alt="">
                             <span>9.3</span>
                         </div>
+                        <div class="list-top-feedback">
+                            <a href="feedback.html">
+                                <img src="" alt="">
+                                <span>135</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </a>
         </div>
     </div>
+    <script src="top.js"></script>
 </body>
 </html>

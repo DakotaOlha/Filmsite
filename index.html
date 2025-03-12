@@ -9,6 +9,9 @@
     <script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src= "https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sen:wght@400..800&display=swap" 
+        rel="stylesheet">
 </head>
 <body>
     <header>
@@ -49,50 +52,111 @@
     </header>
 
     <div class = "content">
-        <section id="home">
-            <h1>Ласкаво просимо до онлайн-каталогу фільмів</h1>
-            <p>Тут ви можете знайти найкращі фільми з описами та постерами.</p>
-        </section>
-    
-        <section id="about">
-            <h2>Про нас</h2>
-            <p>Наша команда створює зручний сервіс для перегляду та аналізу фільмів.</p>
-        </section>
+        <div class="text-center tm-hero-text-container" id="infinite">
+            <div class="tm-hero-text-container-inner">
+                <h2 class="tm-hero-title">
+                    MovieTime
+                </h2>
+                <p class="tm-hero-subtitle">
+                    Тут ви можете знайти найкращі фільми з описами та постерами.
+                </p>
+            </div>
+        </div>
+
+        <div class="tm-next tm-intro-next">
+            <a href="#services" class="text-center tm-down-arrow-link">
+                <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
+              </a>
+        </div>
         
         <section id="services">
-            <h2>Наші послуги</h2>
-            <ul>
-                <li>Каталогізація фільмів</li>
-                <li>Оцінка та рецензії</li>
-                <li>Рекомендації</li>
-            </ul>
-        </section>
-        
-        <section id="portfolio">
-            <h2>Каталог</h2>
-            <div class="film">
-                <!-- <img src="poster.jpg" alt="Фільм"> -->
-                <h3>Назва фільму</h3>
-                <p>Короткий опис фільму.</p>
+            <div class="what-we-do">
+                <h2>Наші послуги</h2>
+            </div>
+            <div class="main-col">
+                <div class="col-lg-5">
+                    <h2>Каталогізація фільмів</h2>
+                    <img src="img/photo.jpg" alt="">
+                </div>
+                <div class="col-lg-5">
+                    <h2>Оцінка та рецензії</h2>
+                    <img src="img/pfoto.jpg" alt="">
+                </div>
+                <div class="col-lg-5">
+                    <h2>Рекомендації</h2>
+                    <img src="img/phfoto.jpg" alt="">
+                </div>
             </div>
         </section>
         
-        <section id="contact">
-            <h2>Контакти</h2>
-            <form id="review-form">
-                <label for="name">Ім'я:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Повідомлення:</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit">Надіслати</button>
-            </form>
-        </section>    
     </div>
+
+
+    <footer class = "contactUs">
+        <div class="section-header">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>If you have any questions, suggestions, or need help, please contact us in any way convenient for you. We are always open to communication and will be happy to provide support.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>Address</h4>
+                            <p>4571 Sugar Camp Road,<br/>Owatonna, Mimmesota, <br/> 55060</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-phone">
+                            </i>
+                        </div>
+
+                        <div class="contact-info-content">
+                            <h4>Phone</h4>
+                            <p>2452-2424-24</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+
+                        <div class="contact-info-content">
+                            <h4>Email</h4>
+                            <p>heh#gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id = "contact-form">
+                        <h2>Send Message</h2>
+                        <div class="input-box">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Ім'я</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-box">
+                            <textarea id="message" name="message" required></textarea>
+                            <label for="message">Повідомлення</label>
+                        </div>
+                        <div class="input-box">
+                            <button type="submit">Надіслати</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="burger.js"></script>
     

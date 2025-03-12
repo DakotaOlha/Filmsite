@@ -13,10 +13,11 @@ header {
     flex-wrap: wrap;
     background-color: rgba(0, 0, 0, .6);
     justify-content: space-between;
-    padding: 10px;
+    padding: 5px;
     width: 100%;
     position: fixed;
     top: 0;
+    z-index: 4000;
 }
 
 .wrap-logo {
@@ -61,6 +62,11 @@ header li > a:hover {
     color: #212121;
 }
 
+
+.content {
+    padding-top: 70px;
+}
+
 ul {
     margin: 20px;
     list-style-type: none;
@@ -71,10 +77,62 @@ li {
     margin: 20px;
 }
 
+.burger-menu {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-right: 10%;
+}
+
+@media (max-width: 820px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .other-pages {
+        position: fixed;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        flex-direction: column;
+        padding: 10px 0;
+        
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: visibility 0.3s, opacity 0.3s ease-in-out, transform 0.3s;
+    }
+
+    .other-pages ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .other-pages li {
+        margin: 10px 0;
+    }
+
+    .other-pages.show {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .content {
     padding-top: 75px;
     background-color: #151515;
+}
+
+.main-header {
+    display: block;
+
 }
 
 .list-top{
@@ -104,13 +162,14 @@ li {
 
 .list-top-body {
     display: flex;
-    align-items: stretch;
+    justify-content: center;
     flex-grow: 1;
     height: 100px;
     max-width: calc(100% - var(--place-size) - var(--place-margin-right));
 }
 
 .list-top-photo {
+    align-items: stretch;
     min-width: 70px;
     background-color: red;
     position: relative;
@@ -128,13 +187,14 @@ li {
 
 .list-top-data {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    align-items: stretch;
     padding: 8px 12px;
     flex-grow: 1;
     border: 0.2rem solid #b74b4b;
     border-left: 0;
     margin-right: 5%;
+    width: 100%;
+    justify-content: center;
 }
 
 
@@ -170,7 +230,6 @@ li {
 .list-top-other-information {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 60%;
 }
 
@@ -183,6 +242,8 @@ li {
     color: #b74b4b7a;
     font-size: 14px;
     margin: 0 12px;
+    margin-right: auto;
+    align-items: center;
 }
 
 .list-top-year {
@@ -190,6 +251,7 @@ li {
     white-space: nowrap;
     min-width: 56px;
     margin: 0 12px;
+    align-items: center;
 }
 
 .list-top-imdb {
@@ -221,3 +283,45 @@ li {
     mask-position: center;
     mask-size: contain;
 }
+
+.list-top-year, .list-top-imdb {
+    margin: 0 auto;/* Центрує середні елементи */
+}
+
+.list-top-feedback {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 120px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    color: #b74b4b;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: default;
+    border: 1px solid #212121;
+    border-radius: 24px;
+    min-height: 42px;
+    line-height: 1.44em;
+    margin: 0 12px;
+}
+
+.list-top-feedback a{
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    margin-left: auto;
+}
+
+.list-top-feedback img{
+    background-color: #b74b4b;
+    margin-right: 4px;
+    mask-image: url(img/m-1.jpg);
+    height: 20px;
+    min-width: 40px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+}
+

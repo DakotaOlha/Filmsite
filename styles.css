@@ -1,5 +1,14 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
 }
 
@@ -120,16 +129,106 @@ li {
     }
 }
 
+.content {
+    box-sizing: border-box;
+    background-color: #151515;
+}
+
+#infinite {
+    background-color: #222;
+    background-image: url(img/fone1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+    min-height: 375px;
+    position: relative;
+}
 
 
-
-section {
+.content section {
     padding: 40px;
     text-align: center;
     background: white;
     margin: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tm-hero-text-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 1.25rem;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.tm-hero-text-container-inner{
+    margin-top: -90px;
+}
+
+.tm-hero-title {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 2px #333;
+    margin-top: 0;
+}
+
+.tm-hero-subtitle {
+
+    text-shadow: 2px 2px 2px #333;
+    line-height: 1.9;
+    margin-top: 0;
+    margin-bottom: 1rem;
+
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    font-family: 'Seb', sans-serif !important;
+}
+
+.tm-intro-next {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+}
+
+.tm-down-arrow-link {
+    display: block;
+    margin-top: 18%;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.tm-down-arrow {
+    color: #a81313;
+    cursor: pointer;
+    padding: 15px 40px;
+    background-color: #9a010122;
+    border: 0.2rem solid #b10c0c;
+    border-radius: 15%;
+}
+
+.tm-down-arrow:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+    background-color: #a81313;
+    border: none;
+    box-shadow: 0 0 30px #9a0101;
+    color: #fff;
 }
 
 .film {
@@ -166,4 +265,258 @@ form button {
 
 form button:hover {
     background: #fbc72d;
+}
+
+
+.what-we-do {
+    font-size: 2.6rem;
+    font-weight: normal;
+    /* color: #b74b4b; */
+    background: linear-gradient(to top, #b74b4b, #af1414);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-col {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.col-lg-1 {
+    flex: 0 0 8.333333%;
+    max-width: 8.333333%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-lg-1 i {
+    display: block;
+    color: #b74b4b;
+    text-align: center !important;
+    font-weight: 400;
+    font-size: 6em;
+}
+
+.col-lg-5 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-lg-5:hover h2 {
+    background: linear-gradient(to top, rgb(255, 0, 0), rgb(92, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* text-shadow: 0 0 20px #9a0101; */
+}
+
+.col-lg-5:hover img{
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+.col-lg-5 h2 {
+    color: #b74b4b;
+    margin-bottom: 1.5rem !important;
+    font-size: 2rem;
+    margin-top: 0;
+    transition: color 1s ease-in-out;
+}
+
+.col-lg-5 img {
+    max-width: 60%;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+
+
+.contactUs {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 3;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.container {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.section-header{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.section-header h2{
+    color: #c53131;
+    font-weight: bold;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.section-header p {
+    color: #fff;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-info {
+    width: 50%;
+}
+
+.contact-info-item {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.contact-info-icon {
+    height: 70px;
+    width: 70px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.contact-info-icon i {
+    font-size: 30px;
+    line-height: 70px;
+
+}
+
+.contact-info-content {
+    margin-left: 20px;
+
+}
+
+.contact-info-content h4{
+    color: #b74b4b;
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+
+.contact-info-content p {
+    color: #fff;
+    font-size: 1em;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 40px;
+    width: 45%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.contact-form h2 {
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-form .input-box {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.contact-form .input-box input,
+.contact-form .input-box textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contact-form .input-box textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: vertical;
+    min-height: 110px;
+}
+
+.contact-form .input-box label {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contact-form .input-box input:focus ~ label,
+.contact-form .input-box textarea:focus ~ label {
+    color: #b10c0c;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contact-form .input-box button {
+    width: 100%;
+    background: #b74b4b ;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px soled #b83535;
+    transition: 0.5s;
+}
+
+.contact-form .input-box button:hover{
+    background: #7c1d1d;
+    color: #fff;
+    box-shadow: 0 0 20px #9a0101;
+}
+
+@media (max-width: 991px){
+    footer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
 }
