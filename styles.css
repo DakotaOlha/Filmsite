@@ -12,123 +12,6 @@ body {
     margin: 0;
 }
 
-header {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, .6);
-    justify-content: space-between;
-    padding: 5px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 2000;
-}
-
-.wrap-logo {
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-}
-
-.logo > img {
-    max-height: 50px;
-}
-
-header nav {
-    display: flex;
-    align-items: center;
-}
-
-.other-pages ul {
-    margin: 20;
-    padding: 0;
-}
-
-.other-pages li {
-    display: inline;
-    margin: 20;
-}
-
-.other-pages li > a{
-    text-decoration: none;
-    color: white;
-    padding: 12px;
-    font-size: 18px; 
-    border-radius: 4px;
-}
-
-.other-pages {
-    display: inline;
-}
-
-header li > a:hover {
-    background-color: #fbdc2d;
-    color: #212121;
-}
-
-
-.content {
-    padding-top: 70px;
-}
-
-ul {
-    margin: 20px;
-    list-style-type: none;
-    padding-left: 0;
-}
-
-li {
-    margin: 20px;
-}
-
-.burger-menu {
-    display: none;
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-@media (max-width: 820px) {
-    .burger-menu {
-        display: block;
-    }
-
-    .other-pages {
-        position: fixed;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        text-align: center;
-        flex-direction: column;
-        padding: 10px 0;
-        
-        visibility: hidden;
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: visibility 0.3s, opacity 0.3s ease-in-out, transform 0.3s;
-    }
-
-    .other-pages ul {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .other-pages li {
-        margin: 10px 0;
-    }
-
-    .other-pages.show {
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .content {
     box-sizing: border-box;
     background-color: #151515;
@@ -318,7 +201,6 @@ form button:hover {
     background: linear-gradient(to top, rgb(255, 0, 0), rgb(92, 0, 0));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* text-shadow: 0 0 20px #9a0101; */
 }
 
 .col-lg-5:hover img{
@@ -387,12 +269,12 @@ form button:hover {
     width: 50%;
 }
 
-.contact-info-item {
+.contact-info_item {
     display: flex;
     margin-bottom: 30px;
 }
 
-.contact-info-icon {
+.contact-info_icon {
     height: 70px;
     width: 70px;
     background-color: #fff;
@@ -400,26 +282,35 @@ form button:hover {
     border-radius: 50%;
 }
 
-.contact-info-icon i {
+.contact-info_icon i {
     font-size: 30px;
     line-height: 70px;
 
 }
 
-.contact-info-content {
+.contact-info_content {
     margin-left: 20px;
 
 }
 
-.contact-info-content h4{
+.contact-info_content h4{
     color: #b74b4b;
     font-size: 1.4em;
     margin-bottom: 5px;
 }
 
-.contact-info-content p {
+.contact-info_content p {
     color: #fff;
     font-size: 1em;
+}
+
+.contact-info_content a:hover p{
+    transition: color 0.5s ease-in-out;
+    color:#d26710
+}
+
+.contact-info_content a{
+    text-decoration: none;
 }
 
 .contact-form {
@@ -501,7 +392,28 @@ form button:hover {
     box-shadow: 0 0 20px #9a0101;
 }
 
+@media (max-width: 1400px){
+    .main-col {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        justify-content: center;
+    }
+
+    .col-lg-5 {
+        flex: 0 0 99%;
+        max-width: 99%;
+    }
+
+    .col-lg-5 h2 {
+        margin-top: 30px;
+    }
+}
+
 @media (max-width: 991px){
+    .main-col {
+        display:flex;
+    }
+
     footer {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -513,10 +425,26 @@ form button:hover {
 
     .contact-info {
         margin-bottom: 40px;
-        width: 100%;
+        width: 100;
+        align-content: center;
     }
 
     .contact-form {
         width: 100%;
     }
+
+    
+    .main-col {
+        flex-direction: column;
+    }
+
+    .col-lg-5 {
+        flex: 0 0 99%;
+        max-width: 99%;
+    }
+
+    .col-lg-5 h2 {
+        margin-top: 30px;
+    }
+
 }
