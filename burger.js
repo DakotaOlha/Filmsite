@@ -1,16 +1,13 @@
 emailjs.init("ZBRRhBdwIinTRFUs1");
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
-event.preventDefault(); // Зупиняє стандартне надсилання форми
+event.preventDefault();
 
-// Отримуємо дані з форми
 let name = document.getElementById('name').value;
 let email = document.getElementById('email').value;
 let message = document.getElementById('message').value;
 
-// Перевіряємо, чи всі поля заповнені
 if (name && email && message) {
-    // Відправляємо через EmailJS
     emailjs.send("service_bm8iyvc", "template_b58vi4o", {
         name: name,
         email: email,
@@ -18,7 +15,7 @@ if (name && email && message) {
     }).then(
         function(response) {
             alert("Відгук успішно надіслано!");
-            document.getElementById('contact-form').reset(); // Очищення форми
+            document.getElementById('contact-form').reset(); 
         },
         function(error) {
             alert("Помилка надсилання: " + JSON.stringify(error));

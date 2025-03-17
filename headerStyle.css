@@ -115,4 +115,8 @@ li {
         opacity: 1;
         transform: translateY(0);
     }
+
+    ul{
+        margin: 0;
+    }
 }

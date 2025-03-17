@@ -213,3 +213,74 @@ body {
     mask-size: contain;
 }
 
+@media (max-width: 768px) {
+    .list-top {
+        align-items: flex-start;
+    }
+
+    .list-top-place {
+        margin: 0;
+    }
+
+    .list-top-body {
+        flex-direction: row;
+        height: auto;
+        width: 100%;
+    }
+
+    .list-top-photo {
+        width: 100%;
+        max-width: 124px;;
+        min-height: 200px;
+        margin-bottom: 10px;
+    }
+
+    .list-top-data {
+        flex: 1 1 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        width: 100%;
+        margin-right: 0;
+        border-left: none;
+        box-sizing: border-box;
+    }
+
+    .list-top-name {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .list-top-other-information {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .list-top-genre,
+    .list-top-year,
+    .list-top-imdb {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .list-top-imdb {
+        justify-content: flex-start;
+    }
+
+    .list-top-photo img{
+        min-width: 124px;
+        background-color: transparent;
+    }
+
+    h4 {
+        font-size: 12px;
+    }
+
+    .list-top-imdb{
+        min-height: 25px;
+        min-width: 16px;
+    }
+}
