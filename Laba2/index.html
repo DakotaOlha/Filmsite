@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Магазин будівельних інструментів</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="">
+  <div class="container">
+    <header>
+        <h1>Your Shopping Cart</h1>
+    
+        <div class="center-section">
+            <div class="shopping">
+                <img src="img/store.png" alt="store">
+                <span class="quantity">0</span>
+            </div>
+        </div>
+    
+        <div class="admin-panel">
+            <button class="signIn"><i class="fa-solid fa-user-tie"></i></button>
+        </div>
+    </header>
+    
+    <div class="sign-block">
+        <div class="sign">
+            <a href="#" class="exit"><i class="fas fa-times"></i></a>
+            <h4 class="sign-head">Авторизація адміністратора</h4>
+            <div class="input-data">
+                <input type="text" id="adminLogin" placeholder="Логін">
+            </div>
+            <div class="input-data">
+                <input type="password" id="adminPassword" placeholder="Пароль">
+            </div>
+            <div class="input-data input-btn">
+                <input type="submit" value="Вхід" onclick="loginAdmin()">
+            </div>
+        </div>
+    </div>
+
+    <div class="list">
+      
+    </div>
+</div>
+<div class="card">
+    <h1>Card</h1>
+    <ul class="listCard">
+    </ul>
+    <div class="checkOut">
+        <div class="total">0</div>
+        <div class="closeShopping">Close</div>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      <script src="js/burger.js"></script>
+</body>
+</html>

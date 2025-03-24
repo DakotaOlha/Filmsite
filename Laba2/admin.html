@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адмін-панель</title>
+    <link rel="stylesheet" href="css/styles2.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+          <h1>Панель адміністратора</h1>
+          <button onclick="logoutAdmin()" class="logout-btn">Вийти</button>
+        </header>
+        <section class="product-form">
+        <h2>Додати товар</h2>
+        <form id="addProductForm">
+            <input type="text" id="productName" placeholder="Назва товару" required>
+            <input type="text" id="productImage" placeholder="Зображення (назва файлу)" required>
+            <input type="number" id="productPrice" placeholder="Ціна" required>
+            <button type="submit">Додати товар</button>
+        </form>
+        </section>
+        <section class="product-list">
+            <h2>Список товарів</h2>
+            <ul id="productList"></ul>
+        </section>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
