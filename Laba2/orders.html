@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Історія замовлень</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .orders { max-width: 600px; margin: auto; text-align: left; }
+        .order { border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
+        button { margin-top: 10px; }
+    </style> -->
+</head>
+<body>
+    <div class="container">
+        <h1>Історія замовлень</h1>
+        <div class="orders"></div>
+        <button class="clear-btn" onclick="clearOrders()">Очистити історію</button>
+        <a href="index.html" class="back-btn">Назад до магазину</a>
+    </div>
+
+    <script>
+        function loadOrders() {
+            let orders = JSON.parse(localStorage.getItem("orders")) || [];
+            let ordersContainer = document.querySelector(".orders");
+            if (orders.length === 0) {
+                ordersContainer.innerHTML = "<p class='no-orders'>У вас поки немає замовлень.</p>";
+                return;
+            }
+            ordersContainer.innerHTML = orders.map(order => `
+                <div class="order">
+                    <h3>Чек №${order.id}</h3>
+                    <p class="order-date">${order.date}</p>
+                    <ul>
+                        ${order.items.map(item => `<li>${item.name} x${item.quantity} - <strong>${item.price} грн</strong></li>`).join("")}
+                    </ul>
+                    <p class="total">Загальна сума: <strong>${order.total} грн</strong></p>
+                </div>
+            `).join("");
+        }
+
+        function clearOrders() {
+            localStorage.removeItem("orders");
+            loadOrders();
+        }
+
+        loadOrders();
+    </script>
+</body>
+</html>

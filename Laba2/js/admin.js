@@ -27,7 +27,11 @@ function renderProducts() {
         let li = document.createElement("li");
         li.innerHTML = `
             <img src="img/${product.image}" width="50">
-            ${product.name} - ${product.price} грн
+            <div>
+                <strong>${product.name}</strong><br>
+                Категорія: <em>${product.category}</em><br>
+                Ціна: ${product.price} грн
+            </div>
             <button onclick="editProduct(${product.id})">Редагувати</button>
             <button onclick="deleteProduct(${product.id})">Видалити</button>
         `;
@@ -41,9 +45,10 @@ addProductForm.addEventListener("submit", function (event) {
     const name = document.getElementById("productName").value;
     const image = document.getElementById("productImage").value;
     const price = parseInt(document.getElementById("productPrice").value);
+    const category = document.getElementById("productCategory").value;
 
-    if (name && image && price) {
-        const newProduct = { name, image, price };
+    if (name && image && price && category) {
+        const newProduct = { name, image, price, category };
 
         fetch("http://localhost:3000/products", {
             method: "POST",
@@ -86,12 +91,14 @@ function editProduct(id) {
     const newName = prompt("Нова назва товару:", product.name);
     const newImage = prompt("Нове зображення (файл):", product.image);
     const newPrice = prompt("Нова ціна:", product.price);
+    const newCat = prompt("Нова категорія:", product.category);
 
-    if (newName && newImage && newPrice) {
+    if (newName && newImage && newPrice && newCat) {
         const updatedProduct = {
             name: newName,
             image: newImage,
-            price: parseInt(newPrice)
+            price: parseInt(newPrice),
+            category: newCat
         };
 
         fetch(`http://localhost:3000/products/${id}`, {

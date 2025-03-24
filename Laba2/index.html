@@ -24,7 +24,18 @@
             <button class="signIn"><i class="fa-solid fa-user-tie"></i></button>
         </div>
     </header>
-    
+
+    <div class="search-filter-block">
+        <input type="text" id="searchInput" placeholder="Пошук інструменту...">
+        <select id="categoryFilter">
+          <option value="">Усі категорії</option>
+          <option value="електроінструмент">Електроінструмент</option>
+          <option value="ручний інструмент">Ручний інструмент</option>
+          <option value="будівельна техніка">Будівельна техніка</option>
+          <!-- Додай інші категорії за потреби -->
+        </select>
+      </div>
+      
     <div class="sign-block">
         <div class="sign">
             <a href="#" class="exit"><i class="fas fa-times"></i></a>
@@ -50,10 +61,23 @@
     <ul class="listCard">
     </ul>
     <div class="checkOut">
-        <div class="total">0</div>
+        <div class="total" onclick="checkoutOrder()">0</div>
         <div class="closeShopping">Close</div>
     </div>
 </div>
+<footer>
+    <div class="footer-container">
+        <div class="footer-links"> 
+            <a href="orders.html">Мої замовлення</a>
+        </div>
+        <div class="footer-socials">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+        <p class="footer-text">Всі права захищені мною.</p>
+    </div>
+</footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
       <script src="js/burger.js"></script>
 </body>
