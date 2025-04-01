@@ -131,8 +131,8 @@ function loginAdmin() {
   const password = document.getElementById("adminPassword").value;
 
   if (login === "admin" && password === "1234") {
-      document.cookie = "admin=true; max-age=3600"; // Авторизація на 1 годину
-      window.location.href = "admin.html"; // Перенаправлення в панель адміністратора
+      document.cookie = "admin=true; max-age=3600";
+      window.location.href = "admin.html"; 
   } else {
       alert("Невірні дані!");
   }
@@ -198,118 +198,8 @@ function checkoutOrder() {
 }
 
 function showReceipt(order) {
-  let receiptWindow = window.open("", "_blank");
-  let receiptContent = `
-      <html>
-      <head>
-          <title>Чек замовлення</title>
-          <style>
-              body { font-family: Arial, sans-serif; text-align: center; }
-              .receipt { border: 1px solid #000; padding: 20px; width: 300px; margin: auto; }
-              .receipt h2 { margin-bottom: 10px; }
-              .receipt ul { text-align: left; padding: 0; list-style-type: none; }
-              .receipt ul li { margin: 5px 0; }
-          </style>
-      </head>
-      <body>
-          <div class="receipt">
-              <h2>Чек №${order.id}</h2>
-              <p><strong>Дата:</strong> ${order.date}</p>
-              <ul>
-                  ${order.items.map(item => `<li>${item.name} x${item.quantity} - ${item.price} грн</li>`).join("")}
-              </ul>
-              <h3>Загальна сума: ${order.total} грн</h3>
-              <button onclick="window.print()">Друк</button>
-          </div>
-      </body>
-      </html>
-  `;
+  localStorage.setItem("order", JSON.stringify(order));
 
-  receiptWindow.document.write(receiptContent);
-  receiptWindow.document.close();
+  window.open("receipt.html", "_blank");
 }
-
-
-// let checkoutSection = document.createElement('div');
-// checkoutSection.classList.add('checkout-section');
-// document.body.appendChild(checkoutSection);
-
-// function createCheckout() {
-//     checkoutSection.innerHTML = `
-//         <div class="checkout-modal">
-//             <h2>Оформлення замовлення</h2>
-//             <ul class="checkout-list"></ul>
-//             <div class="checkout-total">Загальна сума: <span class="checkout-sum">0</span> грн</div>
-//             <button onclick="confirmOrder()">Підтвердити замовлення</button>
-//             <button onclick="closeCheckout()">Закрити</button>
-//         </div>
-//     `;
-//     checkoutSection.style.display = 'flex';
-//     loadCheckoutData();
-// }
-
-// function loadCheckoutData() {
-//     let checkoutList = checkoutSection.querySelector('.checkout-list');
-//     let checkoutSum = checkoutSection.querySelector('.checkout-sum');
-//     checkoutList.innerHTML = '';
-//     let totalPrice = 0;
-//     Object.keys(listCards).forEach(key => {
-//         let value = listCards[key];
-//         totalPrice += value.price * value.quantity;
-//         let newItem = document.createElement('li');
-//         newItem.innerHTML = `${value.name} x ${value.quantity} - ${value.price * value.quantity} грн`;
-//         checkoutList.appendChild(newItem);
-//     });
-//     checkoutSum.innerText = totalPrice.toLocaleString();
-// }
-
-// function confirmOrder() {
-//     let orderData = [];
-//     Object.keys(listCards).forEach(key => {
-//         let value = listCards[key];
-//         orderData.push({
-//             name: value.name,
-//             quantity: value.quantity,
-//             price: value.price * value.quantity
-//         });
-//     });
-//     let orderReceipt = {
-//         id: Date.now(),
-//         date: new Date().toLocaleString(),
-//         items: orderData,
-//         total: total.innerText
-//     };
-//     saveOrder(orderReceipt);
-//     alert('Замовлення підтверджено! Чек збережено.');
-//     listCards = {};
-//     reloadCard();
-//     closeCheckout();
-// }
-
-// function saveOrder(order) {
-//     let orders = JSON.parse(localStorage.getItem('orders')) || [];
-//     orders.push(order);
-//     localStorage.setItem('orders', JSON.stringify(orders));
-// }
-
-// function closeCheckout() {
-//     checkoutSection.style.display = 'none';
-// }
-
-// function showReceipts() {
-//     let receipts = JSON.parse(localStorage.getItem('orders')) || [];
-//     let receiptSection = document.createElement('div');
-//     receiptSection.classList.add('receipt-section');
-//     receiptSection.innerHTML = '<h2>Ваші чеки</h2>';
-//     receipts.forEach(order => {
-//         let receipt = document.createElement('div');
-//         receipt.classList.add('receipt');
-//         receipt.innerHTML = `<p><strong>Чек №${order.id}</strong></p>
-//             <p>Дата: ${order.date}</p>
-//             <ul>${order.items.map(item => `<li>${item.name} x ${item.quantity} - ${item.price} грн</li>`).join('')}</ul>
-//             <p><strong>Загальна сума: ${order.total} грн</strong></p>`;
-//         receiptSection.appendChild(receipt);
-//     });
-//     document.body.appendChild(receiptSection);
-// }
 

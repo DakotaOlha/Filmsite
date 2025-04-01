@@ -375,14 +375,12 @@ header .shopping span {
     margin: 5px 0;
 }
 
-/* Загальна сума */
 .total {
     font-size: 16px;
     font-weight: bold;
     color: #ff6600;
 }
 
-/* Кнопка очистки історії */
 .clear-btn {
     background: #ff3333;
     color: white;
@@ -399,7 +397,6 @@ header .shopping span {
     background: #cc0000;
 }
 
-/* Кнопка повернення */
 .back-btn {
     display: inline-block;
     margin-top: 15px;
@@ -415,7 +412,6 @@ header .shopping span {
     background: #0056b3;
 }
 
-/* Повідомлення, якщо замовлень немає */
 .no-orders {
     font-size: 16px;
     color: #777;
@@ -457,7 +453,6 @@ footer {
     text-decoration: underline;
 }
 
-/* Соціальні мережі */
 .footer-socials {
     margin-bottom: 15px;
 }
@@ -473,12 +468,46 @@ footer {
     color: #ffcc00;
 }
 
-/* Текст копірайту */
 .footer-text {
     font-size: 12px;
     opacity: 0.7;
 }
 
+/*==================Чек========================*/
+
+.receipt { 
+    border: 1px solid #000; 
+    padding: 20px; 
+    width: 300px; 
+    margin: auto; 
+}
+
+.receipt h2 { 
+    margin-bottom: 10px; 
+}
+        
+.receipt ul { 
+    text-align: left; 
+    padding: 0; 
+    list-style-type: none; 
+}
+        
+.receipt ul li { 
+    margin: 5px 0; 
+}
+
+.receipt-button {
+    background: #ffcc00;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.receipt-button:hover {
+    background: #ff9500;
+}
 
 @media screen and (max-height: 650px) {
     .sign {
@@ -486,5 +515,50 @@ footer {
     }
     .exit {
         left: 270px;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        width: 100%;
+    }
+    
+    header {
+        grid-template-columns: 6 0% 20% 20%;
+        padding: 0 10px;
+    }
+    
+    header h1 {
+        margin: 0;
+        font-size: 14px;
+    }
+    
+    header .shopping img {
+        width: 20px;
+    }
+    
+    header .shopping span {
+        padding: 1px 5px;
+    }
+    
+    .admin-panel button {
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    /*===================List of item====================*/
+    .list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card {
+        width: 100%;
+        max-width: 100%;
+        left: 100%;
+    }
+
+    .active .card {
+        left: 0;
     }
 }

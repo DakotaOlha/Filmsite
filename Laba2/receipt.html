@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чек замовлення</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+    </style>
+     <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="receipt">
+        <h2 id="order-id"></h2>
+        <p><strong>Дата:</strong> <span id="order-date"></span></p>
+        <ul id="order-items"></ul>
+        <h3>Загальна сума: <span id="order-total"></span> грн</h3>
+        <button class="receipt-button" onclick="window.print()">Друк</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const order = JSON.parse(localStorage.getItem("order"));
+            if (!order) {
+                document.body.innerHTML = "<h2>Помилка: дані не знайдено</h2>";
+                return;
+            }
+
+            document.getElementById("order-id").innerText = `Чек №${order.id}`;
+            document.getElementById("order-date").innerText = order.date;
+            
+            const itemsList = document.getElementById("order-items");
+            itemsList.innerHTML = order.items.map(item => 
+                `<li>${item.name} x${item.quantity} - ${item.price} грн</li>`
+            ).join("");
+
+            document.getElementById("order-total").innerText = order.total;
+        });
+    </script>
+</body>
+</html>
