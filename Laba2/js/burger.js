@@ -12,7 +12,7 @@ toolModal.classList.add('product-modal');
 toolModal.style.display = 'none';
 document.body.appendChild(toolModal);
 
-//відкриття та закриття кошику
+
 openShopping.addEventListener('click', ()=>{
     body.classList.add('active');
 })
@@ -23,7 +23,8 @@ closeShopping.addEventListener('click', ()=>{
 let listCards  = [];
 let tools = [];
 
-//читання з json
+
+
 fetch('tools.json')
     .then(response => response.json())
     .then(data => {
@@ -49,7 +50,6 @@ fetch('tools.json')
 
 function addToCard(key){
     if(listCards[key] == null){
-        // copy product form list to list card
         listCards[key] = JSON.parse(JSON.stringify(tools[key]));
         listCards[key].quantity = 1;
     }

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Розваги та розважальні програми</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          Розваги
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#hero">Головна</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Про нас</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Послуги</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Галерея</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#reviews">Відгуки</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Контакти</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <button class="btn btn-outline-light open-modal" data-bs-toggle="modal" data-bs-target="#myModal">Перше замовлення</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <!--карусель -->
+  <section id="hero" class="hero">
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+      </div>
+      
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="hero-slide" style="background-image: url('img/fone1jpg.jpg');"></div>
+            <div class="hero-content">
+              <div class="container">
+                <h1 class="display-3 fw-bold">Світ Розваг</h1>
+                <p class="lead fs-4">Найкращі програми для веселого відпочинку</p>
+                <a href="#contact" class="btn btn-light btn-lg mt-4 shadow scroll-to">Зв'язатися з нами</a>
+              </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+          <div class="hero-slide" style="background-image: url('img/fone2.jpg');"></div>
+          <div class="hero-content">
+            <div class="container">
+              <h1 class="display-3 fw-bold">Професійні аніматори</h1>
+              <p class="lead fs-4">Захоплюючі програми для дітей та дорослих</p>
+              <a href="#services" class="btn btn-light btn-lg mt-4 shadow scroll-to">Наші послуги</a>
+            </div>
+
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="hero-slide" style="background-image: url('img/fone3.jpg');"></div>
+          <div class="hero-content">
+            <div class="container">
+              <h1 class="display-3 fw-bold">Організація свят</h1>
+              <p class="lead fs-4">Незабутні враження для вас та ваших гостей</p>
+              <a href="#gallery" class="btn btn-light btn-lg mt-4 shadow scroll-to">Галерея</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      
+      <!-- стрілочки -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  
+  <!-- Про нас -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-md-6">
+          <h2 class="section-title">Хто ми?</h2>
+          <p class="fs-5">Ми команда професіоналів, яка створює незабутні розважальні заходи для всіх вікових категорій. Від сімейних свят до корпоративних вечірок — ми знаємо, як зробити ваш день яскравим!</p>
+          <p class="fs-5">Наш досвід понад 10 років у сфері організації розваг дозволяє нам пропонувати клієнтам тільки найкращі рішення.</p>
+        </div>
+        <div class="col-md-6">
+          <img src="img/logo.png" class="img-fluid rounded-4 shadow about-img" data-bs-toggle="tooltip" title="Це лого!" alt="Розваги">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- послуги -->
+  <section id="services" class="bg-light py-5">
+    <div class="container">
+      <h2 class="section-title text-center">Наші послуги</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 p-4 text-center service-card">
+            <div class="card-icon mb-3">
+              <i class="bi bi-balloon"></i>
+            </div>
+            <h5 class="card-title">Святкові заходи</h5>
+            <p class="card-text">Організація свят, днів народжень, весіль, корпоративів.</p>
+            <button class="btn btn-outline-primary mt-3 service-btn" data-bs-toggle="popover" title="Святкові заходи" data-bs-content="Організація свят, днів народжень, весіль, корпоративів.">Детальніше</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 p-4 text-center service-card">
+            <div class="card-icon mb-3">
+              <i class="bi bi-magic"></i>
+            </div>
+            <h5 class="card-title">Шоу-програми</h5>
+            <p class="card-text">Концерти, театральні постановки, інтерактивні шоу.</p>
+            <button class="btn btn-outline-primary mt-3 service-btn">Детальніше</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 p-4 text-center service-card">
+            <div class="card-icon mb-3">
+              <i class="bi bi-emoji-smile"></i>
+            </div>
+            <h5 class="card-title">Аніматори</h5>
+            <p class="card-text">Професійні ведучі та аніматори для дітей та дорослих.</p>
+            <button class="btn btn-outline-primary mt-3 service-btn">Детальніше</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- галерея -->
+  <section id="gallery" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center">Наші роботи</h2>
+      <div class="row g-3">
+        <div class="col-md-4 col-sm-6 gallery-item">
+          <img src="img/circus.jpg" class="img-fluid rounded shadow" alt="Галерея 1">
+        </div>
+        <div class="col-md-4 col-sm-6 gallery-item">
+          <img src="img/popcorn.jpg" class="img-fluid rounded shadow" alt="Галерея 2">
+        </div>
+        <div class="col-md-4 col-sm-6 gallery-item">
+          <img src="img/lolipops.jpg" class="img-fluid rounded shadow" alt="Галерея 3">
+        </div>
+        <div class="col-md-4 col-sm-6 gallery-item">
+          <img src="img/spiderman.jpg" class="img-fluid rounded shadow" alt="Галерея 4">
+        </div>
+        <div class="col-md-4 col-sm-6 gallery-item">
+          <img src="img/frog.jpg" class="img-fluid rounded shadow" alt="Галерея 5">
+        </div>
+        <div class="col-md-4 col-sm-6 gallery-item">
+          <img src="img/alica.jpg" class="img-fluid rounded shadow" alt="Галерея 6">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- відгуки -->
+  <section id="reviews" class="bg-light py-5">
+    <div class="container">
+      <h2 class="section-title text-center">Відгуки клієнтів</h2>
+      <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="review text-center p-4">
+              <p class="review-text">"Дуже задоволені роботою аніматорів! Діти були в захваті, а дорослі відпочили по-справжньому. Рекомендую!"</p>
+              <p class="review-author">- Олена, мама двох дітей</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="review text-center p-4">
+              <p class="review-text">"Наш корпоратив пройшов на висоті! Професійний підхід, чудова організація та гарний настрій - що ще потрібно для ідеального свята?"</p>
+              <p class="review-author">- Андрій, директор компанії</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="review text-center p-4">
+              <p class="review-text">"Вперше замовили аніматорів на день народження сина - це було найкраще рішення! Весь день пройшов у веселій атмосфері."</p>
+              <p class="review-author">- Наталія, задоволена клієнтка</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- форма -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center">Зв'язатися з нами</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <form id="contactForm" class="row g-3">
+            <div class="col-md-6">
+              <input type="text" class="form-control form-control-lg" id="name" placeholder="Ваше ім'я" required>
+              <div class="invalid-feedback">Будь ласка, введіть ваше ім'я</div>
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control form-control-lg" id="email" placeholder="Ваш email" required>
+              <div class="invalid-feedback">Будь ласка, введіть коректний email</div>
+            </div>
+            <div class="col-12">
+              <input type="text" class="form-control form-control-lg" id="phone" placeholder="Ваш телефон">
+            </div>
+            <div class="col-12">
+              <select class="form-select form-control-lg" id="service">
+                <option value="" selected disabled>Оберіть послугу</option>
+                <option value="party">Організація свят</option>
+                <option value="show">Шоу-програми</option>
+                <option value="animators">Аніматори</option>
+                <option value="other">Інше</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <textarea class="form-control form-control-lg" rows="5" id="message" placeholder="Ваше повідомлення" required></textarea>
+              <div class="invalid-feedback">Будь ласка, введіть ваше повідомлення</div>
+            </div>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-primary btn-lg px-5">Надіслати</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6 contact-info">
+          <div class="card h-100 p-4">
+            <h5 class="card-title">Наші контакти</h5>
+            <ul class="list-unstyled">
+              <li class="mb-3"><i class="bi bi-geo-alt"></i> м. Київ, вул. Весела, 123</li>
+              <li class="mb-3"><i class="bi bi-telephone"></i> +380 (99) 123-45-67</li>
+              <li class="mb-3"><i class="bi bi-envelope"></i> info@rozvahy.com</li>
+              <li class="mb-3"><i class="bi bi-clock"></i> Пн-Пт: 9:00 - 18:00</li>
+            </ul>
+            <div class="social-links mt-4">
+              <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="me-3"><i class="bi bi-youtube"></i></a>
+              <a href="#"><i class="bi bi-telegram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- питання -->
+  <section class="bg-light py-5">
+    <div class="container">
+      <h2 class="section-title text-center">Часті запитання</h2>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+              Як замовити послугу?
+            </button>
+          </h3>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Ви можете замовити послугу, заповнивши контактну форму на нашому сайті, зателефонувавши нам або написавши на електронну пошту. Наш менеджер зв'яжеться з вами для уточнення деталей.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+              Чи працюєте ви з корпоративними клієнтами?
+            </button>
+          </h3>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Так, ми маємо великий досвід роботи з корпоративними клієнтами. Ми можемо організувати корпоративні вечірки, тим-білдинги, святкові заходи для співробітників.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+              Як далеко наперед потрібно бронювати аніматорів?
+            </button>
+          </h3>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Рекомендуємо бронювати аніматорів заздалегідь, особливо у святкові періоди. Мінімальний термін - 2 тижні, але в пікові сезони краще робити замовлення за місяць.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Модальне вікно -->
+  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Спеціальна пропозиція</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Зареєструйтесь на нашому сайті та отримайте знижку 10% на перше замовлення!</p>
+          <form id="modalForm">
+            <div class="mb-3">
+              <input type="email" class="form-control" id="modalEmail" placeholder="Ваш email" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Зареєструватись</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="text-white text-center py-4 bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <h5>Розважальні Програми</h5>
+          <p>Ми створюємо свята, які запам'ятовуються!</p>
+        </div>
+        <div class="col-md-4 mb-3 mb-md-0">
+          <h5>Швидкі посилання</h5>
+          <ul class="list-unstyled">
+            <li><a href="#hero" class="text-white scroll-to">Головна</a></li>
+            <li><a href="#services" class="text-white scroll-to">Послуги</a></li>
+            <li><a href="#contact" class="text-white scroll-to">Контакти</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Ми в соцмережах</h5>
+          <div class="social-links">
+            <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <script src="js/main.js"></script>
+</body>
+
+</html>
